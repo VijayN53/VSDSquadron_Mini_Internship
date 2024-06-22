@@ -2,6 +2,7 @@
 
 ## Basic Details
 **Name:**  N Vijay
+
 **College:** R.M.K. Engineering College
 **Email Id:** [vija21432.ec@rmkec.ac.in](vija21432.ec@rmkec.ac.in)
 **GitHub Profile:** [VijayN53](https://github.com/VijayN53)
