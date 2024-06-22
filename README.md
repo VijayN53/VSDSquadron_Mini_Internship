@@ -1,8 +1,7 @@
 # VSDSquadron Mini Internship June_2024
 
 ## Basic Details
-**Name:**  N Vijay
-
+**Name:**  N Vijay<br />
 **College:** R.M.K. Engineering College
 **Email Id:** [vija21432.ec@rmkec.ac.in](vija21432.ec@rmkec.ac.in)
 **GitHub Profile:** [VijayN53](https://github.com/VijayN53)
