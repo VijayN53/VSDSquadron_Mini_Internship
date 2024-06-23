@@ -11,7 +11,8 @@
 
   **1.Installing Ubuntu on VMBox**<br />
   After installing the tools then open the terminal on Ubuntu to type the command.<br />
-  [Document](https://github.com/VijayN53/VSDSquadron_Mini_Internship/blob/be9d3511691fc4f75648942707b1a260fa4c5404/Task%201/1.Installing%20Ubuntu%20%26%20VMBox.png)<br />
+  ![Installing Ubuntu   VMBox](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/51924514-846f-4fe7-8d96-2619dad511f0)
+
   
   **2.Command for Installing Leafpad**<br />
   ```
