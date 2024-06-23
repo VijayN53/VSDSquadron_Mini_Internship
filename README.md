@@ -32,8 +32,8 @@
   $ gcc filename.c
   $ ./a.out
   ```
-  [OutputFile](https://github.com/VijayN53/VSDSquadron_Mini_Internship/blob/be9d3511691fc4f75648942707b1a260fa4c5404/Task%201/3.Output%20of%20Sample%20code.png)<br />
-  
+  ![Output of Sample code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/b1e1a5dc-295e-4c80-b871-5c5154056b9f)
+    
   **5.Command for Compiling the Code using RISCV Compiler**<br />
   ```
   $ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o filename.o filename.c
