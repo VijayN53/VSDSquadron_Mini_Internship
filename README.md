@@ -25,7 +25,7 @@
   ```
   [Sample Code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/blob/be9d3511691fc4f75648942707b1a260fa4c5404/Task%201/2.Sample_C_code.png)<br />
   
-  **4.Command for Compiling Analyzing the Output**<br />
+  **4.Command for Compiling and Analyzing the Output**<br />
   ```
   $ gcc filename.c
   $ ./a.out
