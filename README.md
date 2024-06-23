@@ -24,7 +24,8 @@
   $ cd
   $ leafpad filename.c &
   ```
-  [Sample Code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/blob/be9d3511691fc4f75648942707b1a260fa4c5404/Task%201/2.Sample_C_code.png)<br />
+  ![Sample_C_code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/584b7959-1760-4e50-bb75-fd011370cb2b)
+
   
   **4.Command for Compiling and Analyzing the Output**<br />
   ```
