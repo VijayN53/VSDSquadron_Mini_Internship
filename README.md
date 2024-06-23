@@ -47,15 +47,15 @@
   $ riscv64-unknown-elf-objdump -d filename.o | less // Gives Reduced Code
   /main //to view the main function of the code
   ```
-  [AssembyCode1](https://github.com/VijayN53/VSDSquadron_Mini_Internship/blob/be9d3511691fc4f75648942707b1a260fa4c5404/Task%201/5.Main%20Function%20Assembly%20code.png)<br />
-  
+  ![Main Function Assembly code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/e3323abe-ece5-481a-8c1a-70e1b5c26ada)
+    
   **7. Command to View the Assembly Code**<br />
   ```
   $ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o filename.o filename.c
   $ riscv64-unknown-elf-objdump -d filename.o | less 
   /main 
   ```
-  [AssemblyCode2](https://github.com/VijayN53/VSDSquadron_Mini_Internship/blob/be9d3511691fc4f75648942707b1a260fa4c5404/Task%201/6.Assembly%20code%20for%20ofast%20command.png)<br />
+  ![Assembly code for ofast command](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/1e14ee97-c3ae-4644-80fa-bed8a9dbefb2)
  *** 
   
   
