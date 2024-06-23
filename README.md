@@ -39,8 +39,8 @@
   $ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o filename.o filename.c
   $ ls -ltr filename.o
   ```
-  [Document](https://github.com/VijayN53/VSDSquadron_Mini_Internship/blob/be9d3511691fc4f75648942707b1a260fa4c5404/Task%201/4.Installing%20RISC%20Compiler.png)<br />
-  
+  ![Installing RISC Compiler](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/d925b284-359e-444e-a7bb-62dd9a135d06)
+
   **6.Command to View the Assembly Code**<br />
   ```
   $ riscv64-unknown-elf-objdump -d filename.o //Gives bunch of Code
