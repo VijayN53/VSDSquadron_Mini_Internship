@@ -10,10 +10,11 @@
 **GitHub Profile:** [VijayN53](https://github.com/VijayN53)<br />
 **Linkedin Profile:** [N VIJAY](https://www.linkedin.com/in/n-vijay-a3950122b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIbIZWmtARZ65D08AaTXuWQ%3D%3D)<br />
 ***
++ **Task 1:** The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code
+
 <details>
   <summary><b>Task 1: Installation and Setup</b></summary>
  
-+ **Task 1:** The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code
 
   **1.Installing Ubuntu on VMBox**<br />
   After installing the tools then open the terminal on Ubuntu to type the command.<br />
@@ -62,6 +63,7 @@
   /main 
   ```
   ![Assembly code for ofast command](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/1e14ee97-c3ae-4644-80fa-bed8a9dbefb2)
+  
  *** 
   
   
