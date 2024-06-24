@@ -1,5 +1,5 @@
 # VSDSquadron Mini Internship June_2024
-<img align="right" width="300" height="200" src="[http://www.fillmurray.com/100/100](https://github.com/VijayN53/To_know_about_repo/assets/106604062/63f4ade3-68d7-4125-aaf1-ac0d44a1a973)"> VSDSquadron Mini Board is a RISC-V based Architecture and consists of 32-bit RISC-V Core ,3 Groups of GPIO pins(15 I/O ports),RV32EC instruction set and supports CH32V305FBP6 single-wire programming protocol and other various communication protocols
+<img align="right" width="300" height="200" src="https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/c446ffa7-7e71-45bb-9802-f883382df2a7"> VSDSquadron Mini Board is a RISC-V based Architecture and consists of 32-bit RISC-V Core ,3 Groups of GPIO pins(15 I/O ports),RV32EC instruction set and supports CH32V305FBP6 single-wire programming protocol and other various communication protocols
 ## Basic Details
 **Name:**  N Vijay<br />
 **College:** R.M.K. Engineering College<br />
