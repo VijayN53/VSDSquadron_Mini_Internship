@@ -9,7 +9,9 @@
 **Email Id:** vija21432.ec@rmkec.ac.in<br />
 **GitHub Profile:** [VijayN53](https://github.com/VijayN53)<br />
 **Linkedin Profile:** [N VIJAY](https://www.linkedin.com/in/n-vijay-a3950122b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIbIZWmtARZ65D08AaTXuWQ%3D%3D)<br />
+
 ***
+
 <details>
 <summary><b>Task 1:</b>The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code</summary>
   
@@ -89,6 +91,7 @@
   ![8 Assebmly code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/c87122f9-81e1-4ca2-b295-d31c0cba3845)
 
  </details>
+ 
  ***
   
 
