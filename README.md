@@ -1,5 +1,5 @@
 # VSDSquadron Mini Internship June_2024
-<img align="right" width="300" height="135" src="https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/368c7a8d-7891-4838-8b8f-f9634078b7fc"> VSDSquadron Mini Board is a RISC-V based Architecture and consists of 32-bit RISC-V Core ,3 Groups of GPIO pins(15 I/O ports),RV32EC instruction set and supports CH32V305FBP6 single-wire programming protocol and other various communication protocols<br />
+<img align="right" width="300" height="138" src="https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/368c7a8d-7891-4838-8b8f-f9634078b7fc"> VSDSquadron Mini Board is a RISC-V based Architecture and consists of 32-bit RISC-V Core ,3 Groups of GPIO pins(15 I/O ports),RV32EC instruction set and supports CH32V305FBP6 single-wire programming protocol and other various communication protocols<br />
 
 
 
@@ -10,9 +10,8 @@
 **GitHub Profile:** [VijayN53](https://github.com/VijayN53)<br />
 **Linkedin Profile:** [N VIJAY](https://www.linkedin.com/in/n-vijay-a3950122b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIbIZWmtARZ65D08AaTXuWQ%3D%3D)<br />
 ***
-+ **Task 1:** The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code
 <details>
-  <summary><b>Task 1: Installing Tools and a Sample C Code</b></summary>
+<summary><b>Task 1:</b>The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code</summary>
   
   **1.Installing Ubuntu on VMBox**<br />
   After installing the tools then open the terminal on Ubuntu to type the command.<br />
@@ -63,7 +62,37 @@
   ![Assembly code for ofast command](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/1e14ee97-c3ae-4644-80fa-bed8a9dbefb2)
   
  *** 
+<details>
+  <summary><b>Task 2:</b>To Write a Simple C code for the project "Crafting a Digital Clock Divider Circuit" and to analyze instructions in  assembly code using RISC-V Compiler by following the same procedures in the task1</summary> 
+
+  **1.Sample C Code on LeafPad**<br />
+  > A clock divider circuit creates lower frequency clock signals from an input clock source. The divider circuit counts input clock cycles, and drives the output clock low and then high for some number of input clock cycles.<br />
+  ![1 Simple C code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/7aca13cc-a5d8-47a1-8379-bab1fa5294a8)
+
+**2.Checking The Output**<br />
+  > The Output Clock signal is produced in the Output and verified.<br />
+  ![2 Output for the  C code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/8fb71cd3-2d46-43fe-a539-21b812756f74)
+
+**3.Run the Code in RISC-V Compiler**<br />
+  > Compiling the C code on RISC-V compiler using the below shown command.<br />
+    ![3 Command to run RISC-V](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/33dc5679-355c-4272-9162-e0e4b0cc7f0b)
+  > In Assembly code the instructions of the main function is analyzed.<br />
+    ![4 Assembly code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/04a37ebd-e120-4d66-be35-c5f78bbec7f4)
+    ![5 Assembly code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/15c26f89-9fad-4506-a8fb-334b5c83d040)
+
+**4.Run the code using Ofast Command**<br />
+  > Compiling the C code on RISC-V compiler using the below shown command.<br />
+  ![6 Ofast cmnd to run code on RISC-V](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/e088dbce-f7c6-4580-a4f0-a343a8f073c7)
+  > In Assembly code the instructions of the main function is analyzed.<br />
+  ![7 Assembly code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/dd42a415-9db4-4862-9f3b-b0b0e3c47f72)
+  ![8 Assebmly code](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/c87122f9-81e1-4ca2-b295-d31c0cba3845)
+
+ 
   
+  </details>
+  
+
+
   
   
   
