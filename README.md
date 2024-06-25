@@ -6,16 +6,14 @@
 ## Basic Details
 **Name:**  N Vijay<br />
 **College:** R.M.K. Engineering College<br />
-**Email Id:** [vija21432.ec@rmkec.ac.in](vija21432.ec@rmkec.ac.in)<br />
+**Email Id:** vija21432.ec@rmkec.ac.in<br />
 **GitHub Profile:** [VijayN53](https://github.com/VijayN53)<br />
 **Linkedin Profile:** [N VIJAY](https://www.linkedin.com/in/n-vijay-a3950122b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIbIZWmtARZ65D08AaTXuWQ%3D%3D)<br />
 ***
 + **Task 1:** The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code
-
 <details>
-  <summary><b>Task 1: Installation and Setup</b></summary>
- 
-
+  <summary><b>Task 1: Installing Tools and a Sample C Code</b></summary>
+  
   **1.Installing Ubuntu on VMBox**<br />
   After installing the tools then open the terminal on Ubuntu to type the command.<br />
   ![Installing Ubuntu   VMBox](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/51924514-846f-4fe7-8d96-2619dad511f0)
