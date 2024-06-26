@@ -95,7 +95,72 @@
  </details>
  
  ***
+<details>
+  <summary><b>Task 3:</b>To Observe the output for the code in both gcc compiler and RISC-V compiler by verifying both the outputs and debug the instruction of the assembly 
+  code</summary> 
+
+  **1.Verifying the Outputs**<br >
+  + The command used to run and verify the output through gcc compiler is shown below,
   
+  ```
+  $ gcc clkdiv.c
+  $ ./a.out
+  ```
+
+  + The command used to run the RISC-V compiler is shown below,
+  ```
+  $ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o clkdiv.o clkdiv.c
+  $ spike pk clkdiv.o
+  ```
+  ![1 Verifying Output](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/5b320348-e612-4ccb-aa56-b08a881f37ea)
+
+  + So we can see that the output is same, when we compile through both gcc and RISC-V compiler.<br />
+  
+  **2.Debugging the instruction**
+  + Before Debugging, open the assembly code of your project in a newtab and enter the below command to view the assembly code.
+  ```
+  $ riscv64-unknown-elf-objdump -d clkdiv.o | less
+  ```
+ ![3 Opening objdump](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/da98e27f-3fad-46e4-baed-996486b1fcb3)
+ 
+  + To start debugging the assembly code,enter the below command as shown,
+  ```
+  $ spike -d pk clkdiv.o
+  (spike) // will be displayed below the above command.
+  ```
+  ![2  Debugging command](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/58b3e52b-0a4e-4f9c-b598-78404b162b9b)
+  
+  + We can also enter a command from where the instruction needed to be debugged (i.e) All the instruction before that address will be executed.
+  ```
+  (spike) until pc 0 100b0 // we can start debugging from this address
+  ```
+  + As you can see in the above image,the instruction of main function, to access the content of a5, type this command as shown,
+  ```
+  (spike) reg 0 a5 // the content before executing the instruction will be displayed
+  ```
+  ![4 Accessing content of  a5 before execution](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/b2759309-d606-4ae2-b831-4500e4eb9859)
+  
+  + Now press enter to view the instruction of the given first address and follow the above command to view the content of a5 after execution,
+    
+  ![5 Accessing the  content of  a5 after execution](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/be847581-e37a-447d-bd54-7178faf20958)
+  
+similarly the contents of stack pointer before and after execution of that instruction can also viewed as shown below.Similarly continue pressing the **ENTER** to view the next significant instruction.<br />
+
+ ![6 Accessing the content of sp before execution](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/53cbc25c-54ee-43de-a9f9-3de05b4b52a7)
+
+ ![7 Accessing the content of sp After execution](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/07872edf-c38f-4baa-84f7-1f2516cd2e61)
+ 
+ **3.Explanation of RISC-V Instructions**<br />
+     **-->lui**  The lui(Load Upper Immediate) instruction in the RISC-V compiler is used to load a 20-bit immediate value into the upper 20 bits of a register, effectively setting up a large constant value. It is typically followed by other instructions to complete the 32-bit value manipulation in the register.<br />
+     **-->addi** The addi(Add Immediate) instruction in the RISC-V compiler adds a 12-bit immediate value to a source register and stores the result in a destination register. It is commonly used for small constant additions to register values.<br />
+     **-->ld**   The ld(Load Doubleword) instruction in the RISC-V compiler is used to load a 64-bit value from memory into a register. It is typically used in 64-bit RISC-V implementations to handle large data transfers from memory.<br />
+     **-->sd**   The sd(Store Doubleword) instruction in the RISC-V compiler is used to store a 64-bit value from a register into memory. It is typically used in 64-bit RISC-V implementations for saving large data from a register to a memory address.<br />
+     **-->sw**   The sw(Store Word) instruction in the RISC-V compiler is used to store a 32-bit value from a register into memory. It is commonly used to save the contents of a register to a specified memory address.
+     
+</details>
+
+***
+
 
 
   
