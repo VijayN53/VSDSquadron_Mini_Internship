@@ -13,7 +13,7 @@
 ***
 
 <details>
-<summary><b>Task 1:</b>The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code</summary>
+<summary><b>Task 1:</b>The task is to install the necessary tools for this internship such as Ubuntu on VMBox, Visual C++ and write a sample C code and analysing RISC asssemby code for the sample C code</summary><br />
   
   **1.Installing Ubuntu on VMBox**<br />
   After installing the tools then open the terminal on Ubuntu to type the command.<br />
@@ -68,7 +68,7 @@
 ***
 
 <details>
-<summary><b>Task 2:</b>To Write a Simple C code for the project "Crafting a Digital Clock Divider Circuit" and to analyze instructions in  assembly code using RISC-V Compiler by following the same procedures in the task1</summary> 
+<summary><b>Task 2:</b>To Write a Simple C code for the project "Crafting a Digital Clock Divider Circuit" and to analyze instructions in  assembly code using RISC-V Compiler by following the same procedures in the task1</summary><br />
 
   **1.Sample C Code on LeafPad**<br />
   > A clock divider circuit creates lower frequency clock signals from an input clock source. The divider circuit counts input clock cycles, and drives the output clock low and then high for some number of input clock cycles.<br />
@@ -97,7 +97,7 @@
  ***
 <details>
   <summary><b>Task 3:</b>To Observe the output for the code in both gcc compiler and RISC-V compiler by verifying both the outputs and debug the instruction of the assembly 
-  code</summary> 
+  code</summary><br />
 
   **1.Verifying the Outputs**<br >
   + The command used to run and verify the output through gcc compiler is shown below,
@@ -144,18 +144,19 @@
     
   ![5 Accessing the  content of  a5 after execution](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/be847581-e37a-447d-bd54-7178faf20958)
   
-similarly the contents of stack pointer before and after execution of that instruction can also viewed as shown below.Similarly continue pressing the **ENTER** to view the next significant instruction.<br />
+  + similarly the contents of stack pointer before and after execution of that instruction can also viewed as shown below.Similarly continue pressing the **ENTER** to view 
+  the next significant instruction.<br />
 
  ![6 Accessing the content of sp before execution](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/53cbc25c-54ee-43de-a9f9-3de05b4b52a7)
 
  ![7 Accessing the content of sp After execution](https://github.com/VijayN53/VSDSquadron_Mini_Internship/assets/106604062/07872edf-c38f-4baa-84f7-1f2516cd2e61)
  
  **3.Explanation of RISC-V Instructions**<br />
-     **-->lui**  The lui(Load Upper Immediate) instruction in the RISC-V compiler is used to load a 20-bit immediate value into the upper 20 bits of a register, effectively setting up a large constant value. It is typically followed by other instructions to complete the 32-bit value manipulation in the register.<br />
-     **-->addi** The addi(Add Immediate) instruction in the RISC-V compiler adds a 12-bit immediate value to a source register and stores the result in a destination register. It is commonly used for small constant additions to register values.<br />
-     **-->ld**   The ld(Load Doubleword) instruction in the RISC-V compiler is used to load a 64-bit value from memory into a register. It is typically used in 64-bit RISC-V implementations to handle large data transfers from memory.<br />
-     **-->sd**   The sd(Store Doubleword) instruction in the RISC-V compiler is used to store a 64-bit value from a register into memory. It is typically used in 64-bit RISC-V implementations for saving large data from a register to a memory address.<br />
-     **-->sw**   The sw(Store Word) instruction in the RISC-V compiler is used to store a 32-bit value from a register into memory. It is commonly used to save the contents of a register to a specified memory address.
+     **--> lui -**  The lui(Load Upper Immediate) instruction in the RISC-V compiler is used to load a 20-bit immediate value into the upper 20 bits of a register, effectively setting up a large constant value. It is typically followed by other instructions to complete the 32-bit value manipulation in the register.<br />
+     **--> addi -** The addi(Add Immediate) instruction in the RISC-V compiler adds a 12-bit immediate value to a source register and stores the result in a destination register. It is commonly used for small constant additions to register values.<br />
+     **--> ld -**   The ld(Load Doubleword) instruction in the RISC-V compiler is used to load a 64-bit value from memory into a register. It is typically used in 64-bit RISC-V implementations to handle large data transfers from memory.<br />
+     **--> sd -**   The sd(Store Doubleword) instruction in the RISC-V compiler is used to store a 64-bit value from a register into memory. It is typically used in 64-bit RISC-V implementations for saving large data from a register to a memory address.<br />
+     **--> sw -**   The sw(Store Word) instruction in the RISC-V compiler is used to store a 32-bit value from a register into memory. It is commonly used to save the contents of a register to a specified memory address.
      
 </details>
 
