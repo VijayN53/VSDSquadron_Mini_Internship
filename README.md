@@ -174,7 +174,7 @@
 - [BASE INSTRCUTION FORMATS AND TYPES](#base-instruction-formats-and-types)
      - [1.Detail Explanation for Base Instructions](#1detail-explanation-for-base-instructions)
 - [32-BIT INSTRUCTION CODE](#32-bit-instruction-code)
-     -[1.Overall Instruction Codes](#1overall-instruction-codes)
+     - [1.Overall Instruction Codes](#1overall-instruction-codes)
 - [REFERENCE](#reference)
   
 ## INTRODUCTION
