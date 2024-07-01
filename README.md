@@ -174,6 +174,7 @@
 - [BASE INSTRCUTION FORMATS AND TYPES](#base-instruction-formats-and-types)
      - [1.Detail Explanation for Base Instructions](#1detail-explanation-for-base-instructions)
 - [32-BIT INSTRUCTION CODE](#32-bit-instruction-code)
+     -[1.Overall Instruction Codes](#1overall-instruction-codes)
 - [REFERENCE](#reference)
   
 ## INTRODUCTION
@@ -399,6 +400,26 @@ to support computer architecture research and education.
     - **Funct7**: 0000000
     - **Binary**: `0000000 00010 01011 001 01111 0110011`
     - **Hex**: `0x0025b233`
+
+#### 1.Overall Instruction Codes
+
++ The below tabulation represents entire 32-bit Instruction code for the RISC-V instructions
+  
+| Instruction | 32-bit Instruction Code      | Hexadecimal  | Type |
+|-------------|------------------------------|--------------|------|
+| ADD r1, r2, r3 | `0000000 00011 00010 000 00001 0110011` | `0x00200133` | R |
+| SUB r3, r1, r2 | `0100000 00010 00001 000 00011 0110011` | `0x402080b3` | R |
+| AND r2, r1, r3 | `0000000 00011 00001 111 00010 0110011` | `0x003001b3` | R |
+| OR r8, r2, r5 | `0000000 00101 00010 110 01000 0110011` | `0x00510c33` | R |
+| XOR r8, r1, r4 | `0000000 00100 00001 100 01000 0110011` | `0x00410c33` | R |
+| SLT r10, r2, r4 | `0000000 00100 00010 010 01010 0110011` | `0x00410a33` | R |
+| ADDI r12, r3, 5 | `000000000101 00011 000 01100 0010011` | `0x00518193` | I |
+| SW r3, r1, 4 | `0000000 00011 00001 010 00000 0100011` | `0x00312023` | S |
+| SRL r16, r11, r2 | `0000000 00010 01011 101 10000 0110011` | `0x0025a233` | R |
+| BNE r0, r1, 20 | `000000 010001 00001 001 00010 1100011` | `0x00814063` | B |
+| BEQ r0, r0, 15 | `000000 000111 00000 000 00000 1100011` | `0x00700063` | B |
+| LW r13, r11, 2 | `000000000010 01011 010 01101 0000011` | `0x0025a603` | I |
+| SLL r15, r11, r2 | `0000000 00010 01011 001 01111 0110011` | `0x0025b233` | R |
     
 ## REFERENCE 
 
