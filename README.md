@@ -171,7 +171,7 @@
      - [1.RISC-V](#1risc-v)
      - [2.RV32I Base Integer Instruction Set](#2rv32i-base-integer-instruction-set)
      - [3.Instruction Set Overview](#3instruction-set-overview)
-- [BASE INSTRCUTION FORMATS AND TYPES](#base-instruction-formats-and-types)
+- [BASE INSTRUCTION FORMATS AND TYPES](#base-instruction-formats-and-types)
      - [1.Detail Explanation for Base Instructions](#1detail-explanation-for-base-instructions)
 - [32-BIT INSTRUCTION CODE](#32-bit-instruction-code)
      - [1.Overall Instruction Codes](#1overall-instruction-codes)
@@ -403,7 +403,7 @@ to support computer architecture research and education.
 
 #### 1.Overall Instruction Codes
 
-+ The below tabulation represents entire 32-bit Instruction code for the RISC-V instructions
++ The below tabulation represents entire 32-bit Instruction code for the given RISC-V instructions
   
 | Instruction | 32-bit Instruction Code      | Hexadecimal  | Type |
 |-------------|------------------------------|--------------|------|
