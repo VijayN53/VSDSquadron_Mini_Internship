@@ -162,6 +162,248 @@
 
 ***
 
+<details>
+  <summary><b>Task 4:</b>To analyze and learn Base Instructions formats (R,I,S,B,U,J) and to identify 32 bit instruction code for the specified instruction type format in RISC-V instruction</summary> 
+
+## TABLE OF CONTENT
+
+- [INTRODUCTION](#introduction)
+     - [1.RISC-V](#1risc-v)
+     - [2.RV32I Base Integer Instruction Set](#2rv32i-base-integer-instruction-set)
+     - [3.Instruction Set Overview](#3instruction-set-overview)
+- [BASE INSTRCUTION FORMATS AND TYPES](#base-instruction-formats-and-types)
+     - [1.Detail Explanation for Base Instructions](#1detail-explanation-for-base-instructions)
+- [32-BIT INSTRUCTION CODE](#32-bit-instruction-code)
+- [REFERENCE](#reference)
+  
+## INTRODUCTION
+
+#### 1.RISC-V
+
++ RISC-V (pronounced "risk-five") is a new instruction-set architecture (ISA) that was originally designed
+to support computer architecture research and education.
++ RISC-V is an open-standard instruction set architecture (ISA) that is free to use for anyone.
++ RISC-V is designed to be simple and modular, allowing for custom extensions and optimizations.
++ Allows for easy implementation of custom extensions tailored to specific applications.
++ Follows the principles of Reduced Instruction Set Computing (RISC), which simplifies the hardware and can improve performance.
+
+#### 2.RV32I Base Integer Instruction Set
+
++ The RV32I Base Integer Instruction Set is a fundamental subset of the RISC-V instruction set architecture (ISA) designed for 32-bit integer operations. It provides the essential instructions needed to perform basic computing tasks. Here’s a detailed breakdown:
+  
+  + **1.Overview of RV32I :**
+     + 32-bit Architecture: The "32" in RV32I refers to the 32-bit width of the instruction set, indicating that instructions and data are processed as 32-bit entities.
+     + Base Integer Instructions: The "I" stands for "Integer," meaning this set covers the basic operations for integer arithmetic, logic, and data manipulation.
+  + **2.Basic Operations :**
+     +  Arithmetic: Add, subtract, multiply, divide.
+     +  Logical: AND, OR, XOR, shift operations.
+     +  Data Movement: Load from memory, store to memory.
+     + Control Flow: Conditional branches, jumps, subroutine calls.
+  
+#### 3.Instruction Set Overview
+
++ The RV32I Base Integer Instruction Set is the fundamental subset of the RISC-V ISA for 32-bit integer operations. Below is a summary of the different instruction types and their functions:
+
+| **Instruction Type** | **Description**                                     | **Examples**        |
+|----------------------|-----------------------------------------------------|---------------------|
+| **Arithmetic**       | Basic math operations                              | `ADD`, `SUB`, `MUL`, `DIV` |
+| **Logical**          | Bitwise operations                                 | `AND`, `OR`, `XOR`, `SLL` |
+| **Memory**           | Data transfer between memory and registers        | `LW`, `SW`          |
+| **Branch**           | Conditional execution based on comparisons        | `BEQ`, `BNE`        |
+| **Jump**             | Unconditional changes in the execution flow       | `JAL`, `JALR`       |
+| **Immediate**        | Operations involving constants                     | `ADDI`, `ORI`      |
+
+
+  
+## BASE INSTRUCTION FORMATS AND TYPES
++ In RISC-V, Generally in base RV32I ISA, there are four core instruction formats (R/I/S/U)
++ There are a further two variants of the instruction formats (B/J) based on the handling of immediates, these base instruction formats that define how instructions are encoded within a 32-bit word
+
+![Types](https://github.com/VijayN53/To_know_about_repo/assets/106604062/73217dd0-4ef7-4dc1-9271-9f95a67e5cb7)
+
+#### 1.Detail Explanation for Base Instructions
+
++ Let's see the instruction type formats in detail,
+  
+| Instruction Format | Explanation |
+|--------------------|-------------|
+| **R-type**         | <ul><li>Used for register-register operations.</li><li>Opcode: Identifies the operation to be performed.</li><li>Funct3: Further specifies the operation.</li><li>Funct7: Used in combination with opcode and funct3 to define the operation.</li><li>rs1, rs2: Source registers.</li><li>rd: Destination register.</li></ul> |
+| **I-type**         | <ul><li>Used for immediate values.</li><li>Opcode: Identifies the operation to be performed.</li><li>Funct3: Further specifies the operation.</li><li>Imm: Immediate value (12-bit).</li><li>rs1: Source register.</li><li>rd: Destination register.</li></ul> |
+| **S-type**         | <ul><li>Used for store instructions.</li><li>Opcode: Identifies the operation to be performed.</li><li>Funct3: Further specifies the operation.</li><li>Imm: Immediate value (split across two fields).</li><li>rs1: Source register.</li><li>rs2: Source register whose value is to be stored.</li></ul> |
+| **B-type**         | <ul><li>Used for branch instructions.</li><li>Opcode: Identifies the operation to be performed.</li><li>Funct3: Further specifies the operation.</li><li>Imm: Immediate value (split across multiple fields).</li><li>rs1, rs2: Source registers.</li></ul> |
+| **U-type**         | <ul><li>Used for upper immediate instructions.</li><li>Opcode: Identifies the operation to be performed.</li><li>Imm: Immediate value (20-bit).</li><li>rd: Destination register.</li></ul> |
+| **J-type**         | <ul><li>Used for jump instructions.</li><li>Opcode: Identifies the operation to be performed.</li><li>Imm: Immediate value (split across multiple fields).</li><li>rd: Destination register.</li></ul> |
+
+## 32-BIT INSTRUCTION CODE
+
+1. **ADD**<br />
+   ```
+   ADD r1, r2, r3
+   ```
+   - **Description**: Performs integer addition between two registers.
+   - **Typical Use**: Adding two values stored in registers to produce a result.
+   - **Type**: R-type
+   - **Opcode**: 0110011
+   - **Funct3**: 000
+   - **Funct7**: 0000000
+   - **Binary**: `0000000 00011 00010 000 00001 0110011`
+   - **Hex**: `0x00200133`
+   
+2. **SUB**<br />
+   ```
+   SUB r3, r1, r2
+   ```
+   - **Description**: Performs integer subtraction between two registers.
+   - **Typical Use**: Subtracting one value from another and storing the result.
+   - **Type**: R-type
+   - **Opcode**: 0110011
+   - **Funct3**: 000
+   - **Funct7**: 0100000
+   - **Binary**: `0100000 00010 00001 000 00011 0110011`
+   - **Hex**: `0x402080b3`
+   
+3. **AND**<br />
+   ```
+   AND r2, r1, r3
+   ```
+   - **Description**: Performs bitwise AND between two registers.
+   - **Typical Use**: Performing a bitwise AND operation to filter specific bits.
+   - **Type**: R-type
+   - **Opcode**: 0110011
+   - **Funct3**: 111
+   - **Funct7**: 0000000
+   - **Binary**: `0000000 00011 00001 111 00010 0110011`
+   - **Hex**: `0x003001b3`
+   
+4. **OR**<br />
+   ```
+   OR r8, r2, r5
+   ```
+   - **Description**: Performs bitwise OR between two registers.
+   - **Typical Use**: Combining bits from two values to include all bits that are set.
+   - **Type**: R-type
+   - **Opcode**: 0110011
+   - **Funct3**: 110
+   - **Funct7**: 0000000
+   - **Binary**: `0000000 00101 00010 110 01000 0110011`
+   - **Hex**: `0x00510c33`
+   
+5. **XOR**<br />
+   ```
+   XOR r8, r1, r4
+   ```
+   - **Description**: Performs bitwise XOR between two registers.
+   - **Typical Use**: Performing a bitwise XOR operation for bit masking or toggling.
+   - **Type**: R-type
+   - **Opcode**: 0110011
+   - **Funct3**: 100
+   - **Funct7**: 0000000
+   - **Binary**: `0000000 00100 00001 100 01000 0110011`
+   - **Hex**: `0x00410c33`
+   
+6. **SLT**<br />
+    ```
+    SLT r10, r2, r4
+    ```
+   - **Description**: Sets register if the first operand is less than the second.
+   - **Typical Use**: Comparing two values to check if one is less than the other.
+   - **Type**: R-type
+   - **Opcode**: 0110011
+   - **Funct3**: 010
+   - **Funct7**: 0000000
+   - **Binary**: `0000000 00100 00010 010 01010 0110011`
+   - **Hex**: `0x00410a33`
+   
+7. **ADDI**<br />
+    ```
+    ADDI r12, r3, 5
+    ```
+   - **Description**: Adds an immediate value to a register.
+   - **Typical Use**: Adding a constant value to a register’s contents.
+   - **Type**: I-type
+   - **Opcode**: 0010011
+   - **Funct3**: 000
+   - **Binary**: `000000000101 00011 000 01100 0010011`
+   - **Hex**: `0x00518193`
+   
+8. **SW**<br />
+    ```
+    SW r3, r1, 4
+    ```
+   - **Description**: Stores the value from a register into memory.
+   - **Typical Use**: Writing data from a register to a memory location.
+   - **Type**: S-type
+   - **Opcode**: 0100011
+   - **Funct3**: 010
+   - **Binary**: `0000000 00011 00001 010 00100 0100011`
+   - **Hex**: `0x00312023`
+   
+9. **SRL**<br />
+    ```
+    SRL r16, r11, r2
+    ```
+   - **Description**: Performs a logical right shift on the value in a register.
+   - **Typical Use**: Shifting bits to the right to divide by powers of two.
+   - **Type**: R-type
+   - **Opcode**: 0110011
+   - **Funct3**: 101
+   - **Funct7**: 0000000
+   - **Binary**: `0000000 00010 01011 101 10000 0110011`
+   - **Hex**: `0x0025a233`
+   
+10. **BNE**<br />
+    ```
+    BNE r0, r1, 20
+    ```
+    - **Description**: Branches if two registers are not equal.
+    - **Typical Use**: Conditional branching in control flow based on comparison.
+    - **Type**: B-type
+    - **Opcode**: 1100011
+    - **Funct3**: 001
+    - **Binary**: `000001 00001 00000 001 0100 1100011`
+    - **Hex**: `0x00814063`
+    
+11. **BEQ**<br />
+    ```
+    BEQ r0, r0, 15
+    ```
+    - **Description**: Branches if two registers are equal.
+    - **Typical Use**: Conditional branching to a target address if a comparison is true.
+    - **Type**: B-type
+    - **Opcode**: 1100011
+    - **Funct3**: 000
+    - **Binary**: `000000 00000 00000 000 01111 1100011`
+    - **Hex**: `0x00700063`
+    
+12. **LW**<br />
+    ```
+    LW r13, r11, 2
+    ```
+    - **Description**: Loads a 32-bit word from memory into a register.
+    - **Typical Use**: Reading data from memory into a register.
+    - **Type**: I-type
+    - **Opcode**: 0000011
+    - **Funct3**: 010
+    - **Binary**: `000000000010 01011 010 01101 0000011`
+    - **Hex**: `0x0025a603`
+    
+13. **SLL**<br />
+    ```
+    SLL r15, r11, r2
+    ```
+    - **Description**: Performs a logical left shift on the value in a register.
+    - **Typical Use**: Shifting bits to the left to multiply by powers of two.
+    - **Type**: R-type
+    - **Opcode**: 0110011
+    - **Funct3**: 001
+    - **Funct7**: 0000000
+    - **Binary**: `0000000 00010 01011 001 01111 0110011`
+    - **Hex**: `0x0025b233`
+    
+## REFERENCE 
+
++ [ISA Specification RISC-V(Volume 1)](https://drive.google.com/file/d/1uviu1nH-tScFfgrovvFCrj7Omv8tFtkp/view?usp=drive_link)
++ Used AI tools to identify 32-bit Instruction Code. 
 
 
   
