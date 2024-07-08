@@ -431,7 +431,7 @@ to support computer architecture research and education.
 ***
   
 <details>
-  <summary><b>Task 5:</b>To Use the RISC-V Core Verilog netlist and testbench for functional simulation experiment by analysing and verifying the waveform in gtkwave simulator.</summary> 
+  <summary><b>Task 5:</b>To Use the RISC-V Core Verilog Netlist and Testbench for Functional simulation experiment by analysing and verifying the Output Waveform in GTKWave simulator.</summary> 
 
 ### PROCEDURES TO PERFORM FUNCTIONAL SIMULATION
 + 1.Create a Directory using the below command.
@@ -461,7 +461,7 @@ $ leafpad vsd_rv32i_tb.v
 + Reference for the Verilog Netlist and TestBench for the simulation.
   
 [Verilog_Netlist](https://github.com/vinayrayapati/rv32i/blob/912d217df3712cd47779131286581a9299da9411/iiitb_rv32i.v
-)
+)<br />
 [TestBench](https://github.com/vinayrayapati/rv32i/blob/912d217df3712cd47779131286581a9299da9411/iiitb_rv32i_tb.v
 )
 
@@ -472,7 +472,7 @@ $ iverilog -o vsd_rv32i vsd_rv32i.v vsd_rv32i_tb.v
 $ ./vsd_rv32i
 ```
 
-+ 5.Using this below command GTKWave will be opened.
++ 5.Using this below command the GTKWave will be opened.
 
 ```
 $ gtkwave vsd_rv32i.vcd
@@ -480,12 +480,12 @@ $ gtkwave vsd_rv32i.vcd
 
 ![Opening GTKWave](https://github.com/VijayN53/To_know_about_repo/assets/106604062/da8eebe3-d352-4c83-b77f-9fdf04e7de11)
 
-+ 6.To analyze and verify the wave form append the below shown registers to your signals 
++ 6.To analyze and verify the Output WaveForm, append the below shown registers to your signals 
 
 ![Signal Selection](https://github.com/VijayN53/To_know_about_repo/assets/106604062/d6bd1548-75a6-4430-8877-8d4100fbc2ff)
 
 
-### OUTPUT WAVEFORM FOR INSTRUCTION USED IN TASK 4
+### OUTPUT WAVEFORM FOR THE INSTRUCTION USED IN TASK 4
 
 1. ```ADD R6, R2, R1```
 
