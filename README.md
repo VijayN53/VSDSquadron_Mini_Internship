@@ -460,9 +460,9 @@ $ leafpad vsd_rv32i_tb.v
 
 + Reference for the Verilog Netlist and TestBench for the simulation.
   
-[Verilog_Netlist](https://github.com/vinayrayapati/rv32i/blob/912d217df3712cd47779131286581a9299da9411/iiitb_rv32i.v
+   [Verilog_Netlist](https://github.com/vinayrayapati/rv32i/blob/912d217df3712cd47779131286581a9299da9411/iiitb_rv32i.v
 )<br />
-[TestBench](https://github.com/vinayrayapati/rv32i/blob/912d217df3712cd47779131286581a9299da9411/iiitb_rv32i_tb.v
+   [TestBench](https://github.com/vinayrayapati/rv32i/blob/912d217df3712cd47779131286581a9299da9411/iiitb_rv32i_tb.v
 )
 
 + 4.To Run and simulate the netlist use the below command to dump the netlist.
