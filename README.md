@@ -430,7 +430,107 @@ to support computer architecture research and education.
 
 ***
   
+<details>
+  <summary><b>Task 5:</b>To Use the RISC-V Core Verilog netlist and testbench for functional simulation experiment by analysing and verifying the waveform in gtkwave simulator.</summary> 
+
+### PROCEDURES TO PERFORM FUNCTIONAL SIMULATION
++ 1.Create a Directory using the below command.
   
+```
+  $ mkdir <any_name>
+```
+
++ 2.Using touch command create two verilog files.
+
+```
+$ touch vsd_rv32i.v
+$ touch vsd_rv32i_tb.v
+```
+
+[View_File](https://github.com/VijayN53/VSDSquadron_Mini_Internship/blob/43fdb800ebc6ea616722fb25033ea56a78f8e843/Task%205/1.Command%20to%20create%20verilog%20files.png
+)
+
++ 3.Open Leafpad to write the Verilog Netlist and TestBench of the same file name created with touch command.
+
+```
+$ cd
+$ leafpad vsd_rv32i.v
+$ leafpad vsd_rv32i_tb.v
+```
+
++ Reference for the Verilog Netlist and TestBench for the simulation.
+  
+[Verilog_Netlist](https://github.com/vinayrayapati/rv32i/blob/912d217df3712cd47779131286581a9299da9411/iiitb_rv32i.v
+)
+[TestBench](https://github.com/vinayrayapati/rv32i/blob/912d217df3712cd47779131286581a9299da9411/iiitb_rv32i_tb.v
+)
+
++ 4.To Run and simulate the netlist use the below command to dump the netlist.
+
+```
+$ iverilog -o vsd_rv32i vsd_rv32i.v vsd_rv32i_tb.v
+$ ./vsd_rv32i
+```
+
++ 5.Using this below command GTKWave will be opened.
+
+```
+$ gtkwave vsd_rv32i.vcd
+```
+
+![Opening GTKWave](https://github.com/VijayN53/To_know_about_repo/assets/106604062/da8eebe3-d352-4c83-b77f-9fdf04e7de11)
+
++ 6.To analyze and verify the wave form append the below shown registers to your signals 
+
+![Signal Selection](https://github.com/VijayN53/To_know_about_repo/assets/106604062/d6bd1548-75a6-4430-8877-8d4100fbc2ff)
+
+
+### OUTPUT WAVEFORM FOR INSTRUCTION USED IN TASK 4
+
+1. ```ADD R6, R2, R1```
+
+![ADD](https://github.com/VijayN53/To_know_about_repo/assets/106604062/f3b63c26-b736-4286-84a6-e0f17c8de4e4)
+
+2. ```SUB R7, R1, R2```  
+
+![SUB](https://github.com/VijayN53/To_know_about_repo/assets/106604062/5c5eea42-fdaa-4341-a2d6-941846b99751)
+
+3. ```AND R8, R1, R3``` 
+
+![AND](https://github.com/VijayN53/To_know_about_repo/assets/106604062/a2e5057c-50eb-438b-9379-b8cbd53ebc81)
+
+4. ```OR R9, R2, R5``` 
+
+![OR](https://github.com/VijayN53/To_know_about_repo/assets/106604062/8f697fa6-92d1-4eec-a94b-1a9e2a2293ae)
+
+5. ```XOR R10, R1, R4``` 
+
+![XOR](https://github.com/VijayN53/To_know_about_repo/assets/106604062/01953481-7567-4c55-9eac-db7ef43d44f3)
+
+6. ```SLT R1, R2, R4``` 
+
+![SLT](https://github.com/VijayN53/To_know_about_repo/assets/106604062/76cd316c-600f-460b-a139-87dfa2e67e10)
+
+7. ```ADDI R12, R4, 5``` 
+
+![ADDI](https://github.com/VijayN53/To_know_about_repo/assets/106604062/a11abf9a-d582-4fa4-a098-09755ecb8acc)
+
+8. ```BEQ R0, R0, 15``` 
+
+![BEQ](https://github.com/VijayN53/To_know_about_repo/assets/106604062/a71c731d-17a8-4215-9762-570d12c6487f)
+
+9. ```BNE R0, R1, 20``` 
+
+![BNE](https://github.com/VijayN53/To_know_about_repo/assets/106604062/c5aaec48-34b7-4377-ae52-b2820ab1a24e)
+
+10. ``` SLL R15, R1, R2``` 
+
+![SLL](https://github.com/VijayN53/To_know_about_repo/assets/106604062/170a559a-c5c9-461f-b986-653abbaac2b1)
+
+</details>
+
+***
+
   
 
 
