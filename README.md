@@ -563,7 +563,7 @@ This project demonstrates how to create a clap switch using the VSDSquadron Mini
 
 ### CIRCUIT PIN CONNECTIONS
 
-**1.Sound Sensor Connections**
+#### 1.Sound Sensor Connections
 
 | Sound Sensor Pin | VSDSquadron Mini Board Pin |
 |------------------|----------------------------|
@@ -571,14 +571,14 @@ This project demonstrates how to create a clap switch using the VSDSquadron Mini
 | GND              | GND                        |
 | DO               | PD6                        |
 
-**2.LED Connections**
+#### 2.LED Connections
 
 | LED Pin  | VSDSquadron Mini Board Pin      |
 |----------|---------------------------------|
 | Anode    | PD5                             |
 | Cathode  | GND (through 220Ω resistor)     |
 
-**3.Wiring Connections**
+#### 3.Wiring Connections
 
 1. **Sound Sensor VCC to VSDSquadron Mini Board VCC**: Connect the VCC pin of the sound sensor to the 3.3V or 5V power supply pin on the VSDSquadron Mini Board.
 2. **Sound Sensor GND to VSDSquadron Mini Board GND**: Connect the GND pin of the sound sensor to a GND pin on the VSDSquadron Mini Board.
