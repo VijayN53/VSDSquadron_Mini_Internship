@@ -531,6 +531,108 @@ $ gtkwave vsd_rv32i.vcd
 
 ***
 
+## CLAP SWITCH USING VSDSQUADRON MINI 
+
+## Table of Contents
+- [OVERVIEW](#overview)
+- [COMPONENTS REQUIRED](#components-required)
+- [CIRCUIT PIN CONNECTIONS](#circuit-pin-connections)
+   - [1.Sound Sensor Connections](#1sound-sensor-connections)
+   - [2.LED Connections](2led-connections)
+   - [3.Wiring Connections](#3wiring-connections)
+- [CIRCUIT PINOUT DIAGRAM](#circuit-pinout-diagram)
+- [SAMPLE CODE](#sample-code)
+- [REFERENCE](#reference)
+- [NOTE](#note)
+  
+   
+
+### OVERVIEW
+This project demonstrates how to create a clap switch using the VSDSquadron Mini Board and a sound sensor. The clap switch detects a clap sound and toggles an LED on and off in response. This simple project is a great way to Understand VSDSquadron Mini board and the RISC-V architecture.
+
+### COMPONENTS REQUIRED
+- VSDSquadron Mini Board
+- Sound Sensor Module (LM393)
+- LED (for visual feedback)
+- Resistor (220Ω)
+- Breadboard
+- Jumper Wires
+
+### CIRCUIT PIN CONNECTIONS
+
+**1.Sound Sensor Connections**
+
+| Sound Sensor Pin | VSDSquadron Mini Board Pin |
+|------------------|----------------------------|
+| VCC              | 3.3V or 5V                 |
+| GND              | GND                        |
+| DO               | PD6                        |
+
+**2.LED Connections**
+
+| LED Pin  | VSDSquadron Mini Board Pin      |
+|----------|---------------------------------|
+| Anode    | PD5                             |
+| Cathode  | GND (through 220Ω resistor)     |
+
+**3.Wiring Connections**
+
+1. **Sound Sensor VCC to VSDSquadron Mini Board VCC**: Connect the VCC pin of the sound sensor to the 3.3V or 5V power supply pin on the VSDSquadron Mini Board.
+2. **Sound Sensor GND to VSDSquadron Mini Board GND**: Connect the GND pin of the sound sensor to a GND pin on the VSDSquadron Mini Board.
+3. **Sound Sensor DO to VSDSquadron Mini Board PD6**: Connect the Digital Output pin of the sound sensor to GPIO0 on the VSDSquadron Mini Board.
+4. **LED Anode to VSDSquadron Mini Board PD5**: Connect the anode of the LED to GPIO1 on the VSDSquadron Mini Board.
+5. **LED Cathode to GND through a 220Ω resistor**: Connect the cathode of the LED to GND through a 220Ω resistor.
+
+### CIRCUIT PINOUT DIAGRAM
++ The below shown circuit represents the pinout connection for this clap switch project.In summary, when a clap is detected by the sound sensor, it sends a high signal to PD6 on the VSDSquadron Mini Board. The microcontroller then toggles the state of PD5, turning the LED on or off, providing visual feedback for the clap detection.
+
+![Slide1](https://github.com/nehith01/vsdsquadron_internship/assets/106604062/ea50e10a-ba57-4ecb-9ae9-9ba81b37bce2)
+
+### SAMPLE CODE
+Here's a simple example code in C to toggle an LED when a clap is detected:
+
+```c
+#include <stdio.h>
+#include <wiringPi.h>
+
+#define SOUND_SENSOR_PIN 0  // GPIO0
+#define LED_PIN 1           // GPIO1
+
+void setup() {
+    wiringPiSetup();              // Initialize wiringPi library
+    pinMode(SOUND_SENSOR_PIN, INPUT);  // Set sound sensor pin as input
+    pinMode(LED_PIN, OUTPUT);     // Set LED pin as output
+}
+
+void loop() {
+    if (digitalRead(SOUND_SENSOR_PIN) == HIGH) {  // Detect clap
+        digitalWrite(LED_PIN, HIGH);              // Turn on LED
+        delay(500);                               // Keep LED on for 500ms
+        digitalWrite(LED_PIN, LOW);               // Turn off LED
+    }
+    delay(100);  // Short delay to debounce sensor
+}
+
+int main() {
+    setup();
+    while (1) {
+        loop();
+    }
+    return 0;
+}
+```
+### REFERENCE
++ Used AI tool to generate a code for this project.
++ [Sample project](https://www.vlsisystemdesign.com/smart-door-using-ir-sensor-and-servo-motor/)
+
+### NOTE
++ The code is subjected to change for future improvements and corrections.
++ The pinout connections maybe adjusted accordingly.
+  
+</details>
+
+***
+
   
 
 
