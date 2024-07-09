@@ -532,7 +532,7 @@ $ gtkwave vsd_rv32i.vcd
 ***
 
 <details>
-  <summary><b>Task 5:</b>To demonstrate a simple project with its overview, components required, circuit pin connections and pinout diagram.</summary> 
+  <summary><b>Task 6:</b>To demonstrate a simple project with its overview, components required, circuit pin connections and pinout diagram.</summary> 
 
 ## CLAP SWITCH USING VSDSQUADRON MINI 
 
