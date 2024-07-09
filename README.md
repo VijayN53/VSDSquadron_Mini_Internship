@@ -541,7 +541,7 @@ $ gtkwave vsd_rv32i.vcd
 - [COMPONENTS REQUIRED](#components-required)
 - [CIRCUIT PIN CONNECTIONS](#circuit-pin-connections)
    - [1.Sound Sensor Connections](#1sound-sensor-connections)
-   - [2.LED Connections](2led-connections)
+   - [2.LED Connections](#2led-connections)
    - [3.Wiring Connections](#3wiring-connections)
 - [CIRCUIT PINOUT DIAGRAM](#circuit-pinout-diagram)
 - [SAMPLE CODE](#sample-code)
