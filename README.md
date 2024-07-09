@@ -531,6 +531,9 @@ $ gtkwave vsd_rv32i.vcd
 
 ***
 
+<details>
+  <summary><b>Task 5:</b>To demonstrate a simple project with its overview, components required, circuit pin connections and pinout diagram.</summary> 
+
 ## CLAP SWITCH USING VSDSQUADRON MINI 
 
 ## Table of Contents
@@ -548,10 +551,10 @@ $ gtkwave vsd_rv32i.vcd
    
 
 ### OVERVIEW
-This project demonstrates how to create a clap switch using the VSDSquadron Mini Board and a sound sensor. The clap switch detects a clap sound and toggles an LED on and off in response. This simple project is a great way to Understand VSDSquadron Mini board and the RISC-V architecture.
+This project demonstrates how to create a clap switch using the VSDSquadron Mini Board(CH32V003F4U6) and a sound sensor(LM393). The clap switch detects a clap sound and toggles an LED on and off in response.This system send signal to the CH32V003 RISC-V processor when a clap sound is detected by the sound sensor. This simple project is a great way to Understand VSDSquadron Mini board and the RISC-V architecture.
 
 ### COMPONENTS REQUIRED
-- VSDSquadron Mini Board
+- VSDSquadron Mini Board(CH32V003F4U6 )
 - Sound Sensor Module (LM393)
 - LED (for visual feedback)
 - Resistor (220Ω)
@@ -626,8 +629,8 @@ int main() {
 + [Sample project](https://www.vlsisystemdesign.com/smart-door-using-ir-sensor-and-servo-motor/)
 
 ### NOTE
-+ The code is subjected to change for future improvements and corrections.
-+ The pinout connections maybe adjusted accordingly.
++ The code is subjected to change for any future improvements or corrections.
++ The pinout connections may also be adjusted accordingly.
   
 </details>
 
