@@ -545,6 +545,7 @@ $ gtkwave vsd_rv32i.vcd
    - [3.Wiring Connections](#3wiring-connections)
 - [CIRCUIT PINOUT DIAGRAM](#circuit-pinout-diagram)
 - [SAMPLE CODE](#sample-code)
+- [OUTPUT VIDEO](#output-video)
 - [REFERENCE](#reference)
 - [NOTE](#note)
   
@@ -595,35 +596,74 @@ This project demonstrates how to create a clap switch using the VSDSquadron Mini
 Here's a simple example code in C to toggle an LED when a clap is detected:
 
 ```c
+#include <ch32v00x.h>
 #include <stdio.h>
-#include <wiringPi.h>
+#include <debug.h>
 
-#define SOUND_SENSOR_PIN 0  // GPIO0
-#define LED_PIN 1           // GPIO1
+#define SOUND_SENSOR_PIN GPIO_Pin_6  // PD6
+#define LED_PIN GPIO_Pin_3           // PD3
+
+void NMI_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
+void HardFault_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
+void Delay_Init(void);
+void Delay_Ms(uint32_t n);
 
 void setup() {
-    wiringPiSetup();              // Initialize wiringPi library
-    pinMode(SOUND_SENSOR_PIN, INPUT);  // Set sound sensor pin as input
-    pinMode(LED_PIN, OUTPUT);     // Set LED pin as output
+    GPIO_InitTypeDef GPIO_InitStructure = {0};  // Structure variable used for GPIO configuration
+    
+    // Enable clock for GPIOD
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+    
+    // Sound Sensor Pin Configuration as input floating
+    GPIO_InitStructure.GPIO_Pin = SOUND_SENSOR_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;  // Defined as Input Floating Type
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+    
+    // LED Pin Configuration as output push-pull
+    GPIO_InitStructure.GPIO_Pin = LED_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;  // Defined as Output Push-Pull Type
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;  // Defined Speed
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
 }
 
 void loop() {
-    if (digitalRead(SOUND_SENSOR_PIN) == HIGH) {  // Detect clap
-        digitalWrite(LED_PIN, HIGH);              // Turn on LED
-        delay(500);                               // Keep LED on for 500ms
-        digitalWrite(LED_PIN, LOW);               // Turn off LED
+    // Check if sound sensor is triggered
+    if (GPIO_ReadInputDataBit(GPIOD, SOUND_SENSOR_PIN)) {
+        // Turn on LED
+        GPIO_SetBits(GPIOD, LED_PIN);
+        printf("Clap detected! LED ON\n");
+        Delay_Ms(500);  // Keep LED on for 500ms
+        // Turn off LED
+        GPIO_ResetBits(GPIOD, LED_PIN);
+        printf("LED OFF\n");
     }
-    delay(100);  // Short delay to debounce sensor
+    Delay_Ms(100);  // Short delay to debounce sensor
 }
 
 int main() {
-    setup();
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);  // Configure the NVIC priority group
+    SystemCoreClockUpdate();  // Update system core clock
+    Delay_Init();  // Initialize delay function
+    setup();  // Configure GPIO pins
+
     while (1) {
         loop();
     }
+    
     return 0;
 }
+
+void NMI_Handler(void) {}
+void HardFault_Handler(void)
+{
+    while (1)
+    {
+    }
+}
+
 ```
+### OUTPUT VIDEO
+[video link](https://drive.google.com/file/d/1fSAjAGuvyzWcryEUP614t0i4ZSWKY3lz/view?usp=drive_link)
 ### REFERENCE
 + Used AI tool to generate a code for this project.
 + [Sample project](https://www.vlsisystemdesign.com/smart-door-using-ir-sensor-and-servo-motor/)
